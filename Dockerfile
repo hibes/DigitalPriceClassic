@@ -41,3 +41,4 @@ ENV BDB_LIB_PATH /bitcoin/db4/lib
 RUN cd $BITCOIN_ROOT/DigitalPriceClassic/src && \
 	make -f makefile.unix
 
+CMD $BITCOIN_ROOT/DigitalPriceClassic/src/DigitalPriced
