@@ -16,7 +16,7 @@ LINK:=$(CXX)
 DEFS=-DBOOST_SPIRIT_THREADSAFE -D_FILE_OFFSET_BITS=64
 
 DEFS += $(addprefix -I,$(CURDIR) $(CURDIR)/obj $(BOOST_INCLUDE_PATH) $(BDB_INCLUDE_PATH) $(OPENSSL_INCLUDE_PATH))
-LIBS = $(addprefix -L,$(BOOST_LIB_PATH) $(BDB_LIB_PATH) $(OPENSSL_LIB_PATH))
+LIBS = $(addprefix -L,$(BOOST_LIB_PATH) $(BDB_LIB_PATH) $(OPENSSL_LIB_PATH) /usr/lib/x86_64-linux-gnu)
 
 TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
 
@@ -153,7 +153,7 @@ OBJS= \
     obj/groestl.o\
     obj/jh.o\
     obj/keccak.o\
-    obj/skein.o 
+    obj/skein.o
 
 all: DigitalPriced
 
